@@ -18,15 +18,27 @@
             height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;  
+            justify-content: center;  
             padding: 0; 
+        }
+
+        .cat-icon {
+            width: 150px; 
+            height: 150px; 
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .cat-icon:hover {
+            transform: scale(5);
         }
 
         /* Profile Section */
         .profile-section {
-            margin: 10px auto; /* Close to the top */
+            display: none; /* Initially hidden */
+            margin: 10px auto; 
             padding: 20px; 
-            background-color: rgba(255, 192, 203, 0.373);/* Semi-transparent background */
+            background-color: rgba(255, 192, 203, 0.373);
             border-radius: 10px;
             box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
             width: 50%; 
@@ -102,29 +114,31 @@
 </head>
 <body>
 
+    <!-- Cat Icon -->
+    <div>
+        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDUxYTE3bjY1dXM1bTk1dHNkdTB3NHA0ejcwbXZzeXRlMHI3Zmh2ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Z8rNSVBSjyHM4EdQLA/giphy.webp" alt="Clickable Cat Icon" class="cat-icon" onclick="showProfile()">
+    </div>
+
     <!-- Profile Section -->
-    <div class="profile-section">
+    <div class="profile-section" id="projectsPanel">
         <div class="about-section d-flex align-items-center">
-            <!-- Profile Image -->
             <img src="https://scontent.fmnl33-5.fna.fbcdn.net/v/t39.30808-6/408484052_6781254961942929_3318276159602056934_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeE4pnepVozHK4FoIXupIxZKZwglNhua4vZnCCU2G5ri9mueBFMeg_VMWUSu1tQIbKqZfIgA_2gKs8QLv5SLh8aY&_nc_ohc=_aFgVPhYzvsQ7kNvgG7cEXz&_nc_ht=scontent.fmnl33-5.fna&_nc_gid=A91Gu2dx71Br3geheAvhqJP&oh=00_AYDIuEHkU03BcWtB712VBP2_I1QjjoB5L7tFOhaP9Tz-Cg&oe=66F5A7DF" alt="My Picture" class="profile-img">
 
-            <!-- About Me Text -->
             <div class="about-text">
                 <h1>Hello, I'm Vea Avygail Lantin</h1>
                 <p class="username">@veaavygail</p>
             </div>
         </div>
 
-        <!-- Description Section -->
         <p>Welcome to my personal portfolio. Below is my featured project. I hope you enjoy visiting my page *_-</p>
-    </div>
 
-    <!-- Project 1 Folder Icon -->
-    <div class="project-icon">
-        <a href="project1.html">
-            <img src="https://cdn-icons-png.flaticon.com/512/545/545234.png" alt="Project 1 Icon">
-        </a>
-        <div class="button-description">Project 1</div> <!-- Added button description -->
+        <!-- Project 1 Folder Icon -->
+        <div class="project-icon">
+            <a href="project1.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/545/545234.png" alt="Project 1 Icon">
+            </a>
+            <div class="button-description">Project 1</div>
+        </div>
     </div>
 
     <!-- Footer -->
@@ -134,5 +148,15 @@
 
     <!-- Bootstrap JS (optional) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showProfile() {
+            document.querySelector('.cat-icon').style.display = 'none'; // Hide the cat icon
+
+            // Show the profile panel after 3 seconds
+            setTimeout(function() {
+                document.getElementById('projectsPanel').style.display = 'block'; // Show the projects panel
+            }, 3000);
+        }
+    </script>
 </body>
 </html>

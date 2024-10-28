@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>veaavygail</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- jQuery and Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <style>
+    [data-bs-theme="pink"] {
+      --bs-body-bg: rgb(251, 166, 237);
+      --bs-tertiary-bg: rgb(246, 140, 232);
+    }
+
+    .svg-wave {
+      position: relative;
+      height: 200px;
+      background-color: rgb(251, 166, 237);
+      overflow: hidden;
+    }
+
+    .svg-wave::before {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      border-radius: 100% 50% 0 0;
+      transform: scale(1.5);
+    }
+
+    .banner-overlay {
+      background-color: rgb(251, 166, 237);
+      padding: 50px 0;
+    }
+
+    .banner-text {
+      padding: 20px;
+      /* Add padding for text readability */
+    }
+
+    h2.white,
+    h5.banner-text.white,
+    p.white {
+      color: black;
+      /* Change to black or another contrasting color */
+    }
+
+    .about {
+      background-color: white;
+      padding: 30px 0;
+      position: relative;
+    }
+
+    .sectioner-header h3 {
+      color: black;
+      /* Adjust text color for better contrast */
+    }
+
+    .line {
+      display: block;
+      width: 50px;
+      /* Adjust width as necessary */
+      height: 4px;
+      /* Height of the line */
+      background-color: black;
+      /* Change to match your theme */
+      margin: 10px auto;
+      /* Center the line */
+    }
+
+    .icon-box {
+      background-color: white;
+      /* Set a contrasting background for icon boxes */
+      border-radius: 10px;
+      /* Optional: rounded corners for icon boxes */
+      padding: 20px;
+      /* Add padding */
+      margin: 20px 0;
+      /* Space between icon boxes */
+      transition: transform 0.3s;
+      /* Add a smooth hover effect */
+    }
+
+    .icon-box:hover {
+      transform: scale(1.05);
+      /* Scale effect on hover */
+    }
+
+    .about-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: black;
+      /* Button color */
+      color: white;
+      /* Button text color */
+      border-radius: 5px;
+      /* Round button corners */
+      margin-top: 20px;
+      /* Space above the button */
+      transition: background-color 0.3s;
+      /* Smooth transition on hover */
+    }
+
+    .about-btn:hover {
+      background-color: darkgray;
+      /* Darker color on hover */
+    }
+  </style>
+</head>
+
+<body id="body" data-bs-theme="pink" style="overflow-x: hidden;">
+
+  <nav class="navbar navbar-expand-lg" style="background-color: var(--bs-tertiary-bg);">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fas fa-bars"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="" data-scroll-nav="0">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-scroll-nav="1">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Portfolio/project.html" data-scroll-nav="2">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-scroll-nav="6">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <section data-scroll-nav="0" style="background-color: rgb(251, 166, 237);">
+    <div class="container ">
+      <div class="row align-items-center">
+        <div class="col-md-6 col-sm-12 wow fadeInUp">
+          <img src="Portfolio\image\2.png" class="img-fluid"
+            alt="portfolioImg" style="width: 700px;">
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="banner-text">
+            <h2 class="white mt-5">Welcome to My Portfolio</h2>
+            <p class="white">
+            <h5>Hello! I’m Vea,</h5>
+            A passionate developer with a keen interest in creating innovative projects that blend functionality and
+            design.
+            This portfolio showcases my journey through various programming languages and frameworks, reflecting my
+            skills
+            in web development, game design, and software solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#fba6ed" fill-opacity="1"
+      d="M0,224L48,213.3C96,203,192,181,288,149.3C384,117,480,75,576,80C672,85,768,139,864,133.3C960,128,1056,64,1152,48C1248,32,1344,64,1392,80L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+    </path>
+  </svg>
+
+
+  <!-- About Section -->
+  <section class="about section-padding prelative" data-scroll-nav="1">
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sectioner-header text-center">
+            <h3>About</h3>
+            <span class="line"></span>
+            <p>In this portfolio, you'll discover a variety of projects that showcase my
+              skills and creativity. Each project reflects my ability to solve problems and create engaging user
+              experiences, whether it's crafting responsive web applications or working with APIs. I strive to combine
+              functionality with aesthetic appeal in all my work.</p>
+          </div>
+          <div class="section-content text-center">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
+                  <i class="fa fa-university" aria-hidden="true"></i>
+                  <h5>Biography</h5>
+                  <p>I am currently studying Bachelor of Science in Information Technology at polytechnic University of
+                    the Philippines, where I developed a passion for
+                    programming and web development.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
+                  <i class="fa fa-mobile" aria-hidden="true"></i>
+                  <h5>Projects</h5>
+                  <p> recently developed a portfolio website to showcase my work and skills, where I incorporated best
+                    practices in responsive design and accessibility.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="icon-box wow fadeInUp" data-wow-delay="0.6s">
+                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                  <h5>Hobbies</h5>
+                  <p>In my free time, I enjoy playing **Stardew Valley**, where I can unwind and cultivate my virtual
+                    farm. I also love to read, exploring various genres that fuel my creativity and imagination.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container text-center">
+      <p>&copy; 2024 Vea. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -2,219 +2,172 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>veaavygail</title>
-  
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>veaavygail</title>
 
-  
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="Portfolio/style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" href="About/style.css" />
+	<link rel="stylesheet" href="About/parallax.css" />
 
-  <style>
-    [data-bs-theme="pink"] {
-      --bs-body-bg: rgb(251, 166, 237);
-      --bs-tertiary-bg: rgb(246, 140, 232);
-    }
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    .svg-wave {
-      position: relative;
-      height: 200px;
-      background-color: rgb(251, 166, 237);
-      overflow: hidden;
-    }
-
-    .svg-wave::before {
-      content: "";
-      position: absolute;
-      bottom: 100%;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: transparent;
-      border-radius: 100% 50% 0 0;
-      transform: scale(1.5);
-    }
-
-    .banner-overlay {
-      background-color: rgb(251, 166, 237);
-      padding: 50px 0;
-    }
-
-    .banner-text {
-      padding: 20px;
-    }
-
-    h2.white,
-    h5.banner-text.white,
-    p.white {
-      color: black;
-    }
-
-    .about {
-      background-color: white;
-      padding: 30px 0;
-      position: relative;
-    }
-
-    .sectioner-header h3 {
-      color: black;
-    }
-
-    .line {
-      display: block;
-      width: 50px;
-      height: 4px;
-      background-color: black;
-      margin: 10px auto;
-    }
-
-    .icon-box {
-      background-color: white;
-      border-radius: 10px;
-      padding: 20px;
-      margin: 20px 0;
-      transition: transform 0.3s;
-    }
-
-    .icon-box:hover {
-      transform: scale(1.05);
-    }
-
-    .about-btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: black;
-      color: white;
-      border-radius: 5px;
-      margin-top: 20px;
-      transition: background-color 0.3s;
-    }
-
-    .about-btn:hover {
-      background-color: darkgray;
-    }
-  </style>
+	<style>
+		[data-bs-theme="pink"] {
+			--bs-body-bg: rgb(251, 166, 237);
+			--bs-tertiary-bg: rgb(246, 140, 232);
+		}
+	</style>
 </head>
 
 <body id="body" data-bs-theme="pink" style="overflow-x: hidden;">
+	<nav class="navbar navbar-expand-lg" style="background-color: var(--bs-tertiary-bg);">
+		<div class="container-fluid">
+			<button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation"></button>
+			<div class="collapse navbar-collapse">
+			  <ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+				  <a class="nav-link" href="../index.html" data-scroll-nav="0">Home</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="/Portfolio/About.html" data-scroll-nav="1">About</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="../Portfolio/Project.html" data-scroll-nav="2">Projects</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="" data-scroll-nav="0">Gallery</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="" data-scroll-nav="0">Awards</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="#" data-scroll-nav="6">Contact</a>
+				</li>
+			  </ul>
+			</div>
+		  </div>
+	  </nav>
 
-  <nav class="navbar navbar-expand-lg" style="background-color: var(--bs-tertiary-bg);">
-    <div class="container">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="fas fa-bars"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html" data-scroll-nav="0">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Portfolio\About.html" data-scroll-nav="1">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Portfolio\Project.html" data-scroll-nav="2">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" data-scroll-nav="6">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+	<section>
+		<div class="keyart" id="parallax">
+			<div class="keyart_layer parallax" id="keyart-0" data-speed="2"></div>
+			<div class="keyart_layer parallax" id="keyart-1" data-speed="25"></div>
+			<div class="keyart_layer parallax" id="keyart-2" data-speed="11"></div>
+			<div class="keyart_layer parallax" id="keyart-3" data-speed="16"></div>
+			<div class="keyart_layer parallax" id="keyart-4" data-speed="15"></div>
+			<div class="keyart_layer" id="keyart-8" data-speed="100"></div>
+		</div>
+	</section>
+
+	<section class="main-content overflow-hidden">
+		<div class="container-fluid p-0" style="height: auto; background-color: rgb(251, 166, 237);">
+
+			<svg width="100%" height="5%" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg"
+				preserveAspectRatio="none" overflow="auto" shape-rendering="auto" fill="#fba6ed">
+				<defs>
+					<path id="wavepath"
+						d="M 0 2000 0 500 Q 133.5 396 267 500 t 267 0 267 0 267 0 267 0 267 0 v1000 z" />
+					<path id="motionpath" d="M -534 0 0 0" />
+				</defs>
+				<g>
+					<use xlink:href="#wavepath" y="-100" fill="#ffffff">
+						<animateMotion dur="5s" repeatCount="indefinite">
+							<mpath xlink:href="#motionpath" />
+						</animateMotion>
+					</use>
+				</g>
+			</svg>
 
 
-  <section data-scroll-nav="0" style="background-color: rgb(251, 166, 237);">
-    <div class="container ">
-      <div class="row align-items-center">
-        <div class="col-md-6 col-sm-12 wow fadeInUp">
-          <img src="Portfolio\image\2.png" class="img-fluid"
-            alt="portfolioImg" style="width: 700px;">
-        </div>
-        <div class="col-md-6 col-sm-12">
-          <div class="banner-text">
-            <h2 class="white mt-5">Welcome to My Portfolio</h2>
-            <p class="white">
-            <h5>Hello! I’m Vea,</h5>
-            A passionate developer with a keen interest in creating innovative projects that blend functionality and
-            design.
-            This portfolio showcases my journey through various programming languages and frameworks, reflecting my
-            skills
-            in web development, game design, and software solutions.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+			<section class="about section-padding prelative" data-scroll-nav="1">
+				<div class="container-fluid" style="background-color: white;">
+					<div class="container text-center">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="sectioner-header text-center">
+									<h3>About</h3>
+									<span class="line"></span>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<p>In this portfolio, you'll discover a variety of projects that showcase my
+											skills and creativity. Each project reflects my ability to solve problems
+											and
+											create
+											engaging user
+											experiences, whether it's crafting responsive web applications or working
+											with
+											APIs. I
+											strive to combine
+											functionality with aesthetic appeal in all my work.</p>
+									</div>
+								</div>
+								<div class="section-content text-center">
+									<div class="row">
+										<div class="col-md-4">
+											<div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
+												<i class="fa fa-university" aria-hidden="true"></i>
+												<h5>Biography</h5>
+												<p>I am currently studying Bachelor of Science in Information Technology
+													at
+													polytechnic University of
+													the Philippines, where I developed a passion for
+													programming and web development.
+												</p>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
+												<i class="fa fa-mobile" aria-hidden="true"></i>
+												<h5>Projects</h5>
+												<p> recently developed a portfolio website to showcase my work and
+													skills,
+													where
+													I incorporated best
+													practices in responsive design and accessibility.
+												</p>
+											</div>
+										</div>
+										<div class="col-md-4 mb-5">
+											<div class="icon-box wow fadeInUp" data-wow-delay="0.6s">
+												<i class="fa fa-calendar" aria-hidden="true"></i>
+												<h5>Hobbies</h5>
+												<p>In my free time, I enjoy playing **Stardew Valley**, where I can
+													unwind
+													and
+													cultivate my virtual
+													farm. I also love to read, exploring various genres that fuel my
+													creativity
+													and imagination.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			</section>
 
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path fill="#fba6ed" fill-opacity="1"
-      d="M0,224L48,213.3C96,203,192,181,288,149.3C384,117,480,75,576,80C672,85,768,139,864,133.3C960,128,1056,64,1152,48C1248,32,1344,64,1392,80L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
-    </path>
-  </svg>
 
+			<!-- JavaScript -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+			<script type="text/javascript" src="js/parallax.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+				integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+				crossorigin="anonymous"></script>
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+				integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+				crossorigin="anonymous"></script>
+		</div>
 
-  <!-- About Section -->
-  <section class="about section-padding prelative" data-scroll-nav="1">
-    <div class="container mt-4">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="sectioner-header text-center">
-            <h3>About</h3>
-            <span class="line"></span>
-            <p>In this portfolio, you'll discover a variety of projects that showcase my
-              skills and creativity. Each project reflects my ability to solve problems and create engaging user
-              experiences, whether it's crafting responsive web applications or working with APIs. I strive to combine
-              functionality with aesthetic appeal in all my work.</p>
-          </div>
-          <div class="section-content text-center">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
-                  <i class="fa fa-university" aria-hidden="true"></i>
-                  <h5>Biography</h5>
-                  <p>I am currently studying Bachelor of Science in Information Technology at polytechnic University of
-                    the Philippines, where I developed a passion for
-                    programming and web development.
-                  </p>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
-                  <i class="fa fa-mobile" aria-hidden="true"></i>
-                  <h5>Projects</h5>
-                  <p> recently developed a portfolio website to showcase my work and skills, where I incorporated best
-                    practices in responsive design and accessibility.
-                  </p>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="icon-box wow fadeInUp" data-wow-delay="0.6s">
-                  <i class="fa fa-calendar" aria-hidden="true"></i>
-                  <h5>Hobbies</h5>
-                  <p>In my free time, I enjoy playing **Stardew Valley**, where I can unwind and cultivate my virtual
-                    farm. I also love to read, exploring various genres that fuel my creativity and imagination.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container text-center">
-      <p>&copy; 2024 Vea. All Rights Reserved.</p>
-    </div>
-  </footer>
 </body>
 
 </html>

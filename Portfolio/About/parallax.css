@@ -1,0 +1,96 @@
+/* PARALLAX.CSS */
+/*CSS created by Christopher Jay De Claro*/
+/*github.com/cjdeclaro*/
+
+/*Key Art default settings*/
+.f5 {
+    font-size: 25px; 
+    margin-top: 70px;
+	color: rgb(37, 37, 37); 
+	padding: 50px;
+}
+
+.img{
+	width: 100vw;
+	padding: 1px;
+	margin-top: 10px;
+}
+.card{
+	padding: 10px;
+	color:#191818;
+	background-color: #E2D979;
+	border-color: #986600;
+	border-radius: 5px;
+}
+
+.card:hover {
+	transform: scale(1.05);
+  }
+
+.text-center {
+    text-align: center;
+}
+
+.keyart,
+.keyart_layer {
+	height: 1000px;
+}
+
+.keyart {
+	position: relative;
+	z-index: 10;
+}
+
+.keyart_layer {
+	background-position: bottom center;
+	background-size: auto 1038px;
+	background-repeat: repeat-x;
+	width: 100%;
+	position: absolute;
+}
+
+.keyart_layer.parallax {
+	position: fixed;
+}
+
+.main-content {
+	width: 100%;
+	position: absolute;
+	z-index: 200;
+}
+
+/*ADD OR REMOVE LAYERS AS NEEDED*/
+
+#keyart-0 {
+	background-image: url(img/parallax0.png);
+}
+
+#keyart-1 {
+	background-image: url(img/parallax1.png);
+}
+
+#keyart-2 {
+	background-image: url(img/parallax2.png);
+}
+
+#keyart-3 {
+	background-image: url(img/parallax3.png);
+}
+
+#keyart-4 {
+	background-image: url(img/parallax4.png);
+}
+
+#keyart-scrim {
+	opacity: 0;
+}
+
+footer {
+	background-color: #E6CF49;
+	color: black;
+	text-align: center;
+	padding: 10px 0;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+  }

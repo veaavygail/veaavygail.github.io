@@ -1,0 +1,34 @@
+/*PUT YOUR CUSTOM STYLE HERE*/
+
+/*!This style is important, do not override!*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.sectioner-header {
+    transition: 1s;
+    font-size: 40px;
+    letter-spacing: normal;
+}
+
+.sectioner-header:hover {
+    letter-spacing: .5em;
+}
+
+.icon-box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    transition: transform 0.3s;
+}
+
+.icon-box:hover {
+    transform: scale(1.05);
+}
+
+.footer{
+    background-color: rgb(251, 166, 237);
+    margin: 0px;
+}

@@ -6,6 +6,12 @@
 	padding: 0;
 }
 
+.navbar-nav{
+    font-size: 1.25rem; 
+    font-weight: bold; 
+    color: black;
+}
+
 .sectioner-header {
     transition: 1s;
     font-size: 40px;

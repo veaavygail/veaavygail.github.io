@@ -1,59 +1,60 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
 
-   html, body {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-        }
+#body {
+    flex: 1;
+}
 
-        #body {
-            flex: 1; 
-        }
+.btn {
+    background-color: rgb(227, 112, 131);
+}
 
-        .btn{
-            background-color: rgb(227, 112, 131);
-        }
+footer {
+    background-color: var(--bs-tertiary-bg);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+}
 
-        footer {
-            background-color: var(--bs-tertiary-bg);
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            margin-top: auto;
-        }
+[data-bs-theme="pink"] {
+    --bs-body-bg: pink;
+    --bs-tertiary-bg: rgb(227, 112, 131);
+}
 
-        [data-bs-theme="pink"] {
-            --bs-body-bg: pink;
-            --bs-tertiary-bg: rgb(227, 112, 131);
-        }
+[data-bs-theme="dark"] {
+    --bs-body-bg: #343a40;
+    --bs-tertiary-bg: #495057;
+}
 
-        [data-bs-theme="dark"] {
-            --bs-body-bg: #343a40;
-            --bs-tertiary-bg: #495057;
-        }
+.custom-card {
+    width: 550px;
+    height: 300px;
+    overflow: hidden;
+}
 
-        .custom-card {
-            width: 550px;
-            height: 300px;
-            overflow: hidden;
-        }
+.custom-card img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}
 
-        .custom-card img {
-            width: auto;
-            height: 100%;
-            object-fit: cover;
-        }
+.btn-primary {
+    background-color: var(--bs-tertiary-bg);
+    border: none;
+    width: 400px;
+}
 
-        .btn-primary {
-            background-color: var(--bs-tertiary-bg);
-            border: none;
-            width: 400px;
-        }
+.btn-dark {
+    background-color: black;
+}
 
-        .btn-dark {
-            background-color: black;
-        }
-
-        .btn-dark[data-bs-theme="dark"] {
-            background-color: var(--bs-tertiary-bg);
-        }
+.btn-dark[data-bs-theme="dark"] {
+    background-color: var(--bs-tertiary-bg);
+}

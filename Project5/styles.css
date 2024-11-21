@@ -13,10 +13,17 @@
     src: url('../assets/fonts/Powerpuff.otf') format('truetype');
 }
 
+html, body {
+    overflow-x: hidden; 
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
 body {
     background-color: #ea78a0;
     background-position: center;
-    overflow-x: hidden;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -27,7 +34,7 @@ body {
     font-family: 'Love', sans-serif;
     background-color: #eeb2dd;
     position: sticky;
-    width: 100vw;
+    width: 100%;
 }
 
 .navbar-brand img {
@@ -48,18 +55,18 @@ body {
 iframe {
     width: 100%;
     height: auto;
-    max-width: 100%; 
+    max-width: 100%;
     display: block;
     margin: 0 auto;
 }
 
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; 
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     max-width: 100%;
-    background: #000; 
+    background: #000;
 }
 
 .video-container iframe {
@@ -72,10 +79,12 @@ iframe {
 
 .Logo1 {
     width: 99vw;
+    max-width: 100%;
 }
 
 .Logo2 {
     width: 600px;
+    max-width: 100%;
 }
 
 .text {
@@ -95,10 +104,9 @@ iframe {
 }
 
 .text {
-    width: 1000px;
+    width: 100%;
     background-color: #ea78a0;
 }
-
 
 .card1 {
     width: 100%;
@@ -117,5 +125,4 @@ footer {
     background-color: #eeb2dd;
     padding: 10px;
     margin: 0;
-
 }

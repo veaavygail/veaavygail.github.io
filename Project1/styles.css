@@ -1,11 +1,12 @@
 
 body {
+    overflow-x: hidden;
     font-family: 'Poppins', 'Noto Serif Hebrew', sans-serif;
     background-color: #e9cf67;
     background: linear-gradient(0deg, rgba(233,207,103,1) 0%, rgba(255,247,198,1) 13%, rgba(243,228,139,1) 30%, rgba(255,229,74,1) 50%, rgba(243,228,139,1) 72%, rgba(255,247,198,1) 88%, rgba(233,207,103,1) 100%);
     color: #333;
     margin: 0px;
-    overflow-x: hidden;
+    
 }
 .card {
     width: 100%;

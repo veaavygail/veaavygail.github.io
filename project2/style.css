@@ -1,7 +1,6 @@
-
 @font-face {
-  font-family: 'Awesome South Korea';
-  src: url('../assets/fonts/awesome-south-korea.ttf') format('truetype');
+   font-family: 'Awesome South Korea';
+   src: url('../assets/fonts/awesome-south-korea.ttf') format('truetype');
 }
 
 body {
@@ -10,21 +9,27 @@ body {
    background-repeat: no-repeat;
    height: 100%;
    margin: 0;
-   font-family: 'Roboto', sans-serif !important; 
+   font-family: 'Roboto', sans-serif !important;
    overflow-x: hidden;
+   margin: 0;
+   padding: 0;
+   width: 100%;
+
 }
 
 .card-text1 {
-  font-family: 'Poppins', sans-serif; 
-  color:black;
+   font-family: 'Poppins', sans-serif;
+   color: black;
 }
 
 .card-title1 {
-  font-family: 'Poppins', sans-serif; 
+   font-family: 'Poppins', sans-serif;
 }
 
-.navbar, .navbar-brand, .nav-link {
-   font-family: 'Awesome South Korea', sans-serif; 
+.navbar,
+.navbar-brand,
+.nav-link {
+   font-family: 'Awesome South Korea', sans-serif;
 }
 
 .navbar {
@@ -32,11 +37,7 @@ body {
 }
 
 .navbar-brand {
-   font-family: 'Awesome South Korea', sans-serif; 
-}
-
-html {
-   scroll-behavior: smooth;
+   font-family: 'Awesome South Korea', sans-serif;
 }
 
 #gmap-canvas img {
@@ -62,7 +63,8 @@ html {
    object-fit: cover;
 }
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
    background-color: rgba(0, 0, 0, 0.5);
    border-radius: 50%;
 }
@@ -112,7 +114,7 @@ html {
 }
 
 iframe {
-   width: 100%;
+   width: 100vw;
    height: 500px;
    border: none;
 }
@@ -121,9 +123,10 @@ footer {
    background-color: #dee397e6;
    color: black;
    text-align: center;
+   margin: auto;
    padding: 10px 0;
-   position: relative;
+   position: bottom;
    bottom: 0;
-   width: 100%;
+   width: 100vw;
    margin: 0;
 }

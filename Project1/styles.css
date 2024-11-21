@@ -1,11 +1,14 @@
 
 body {
-    overflow-x: hidden;
     font-family: 'Poppins', 'Noto Serif Hebrew', sans-serif;
     background-color: #e9cf67;
     background: linear-gradient(0deg, rgba(233,207,103,1) 0%, rgba(255,247,198,1) 13%, rgba(243,228,139,1) 30%, rgba(255,229,74,1) 50%, rgba(243,228,139,1) 72%, rgba(255,247,198,1) 88%, rgba(233,207,103,1) 100%);
     color: #333;
     margin: 0px;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
     
 }
 .card {
@@ -71,10 +74,10 @@ footer {
     background-color: rgba(255, 247, 195, 0.782);
     color: #000000;
     text-align: center;
-    padding: 10px;
+    padding: 0px;
     position: relative;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
 }
 
 footer p {

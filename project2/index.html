@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="ICON.ico" type="image/x-icon">
   <title>Welcome to Korea</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -42,10 +42,10 @@
   </nav>
 
 
-  <section id="home" class="section" style="background-color:#dee397e6;">
+  <section id="home" class="section" style="background-color:#dee397e6; overflow-x: hidden; height: 100vh;">
     <div class="container-fluid m-0 p-0">
       <div class="row">
-        <div class="col-lg-12 ">
+        <div class="col-lg-12 col-sm-12">
           <img
             src="https://images.pexels.com/photos/237211/pexels-photo-237211.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             class="img-fluid1" alt="Seoul at night" style="width: 100%; height: auto;">
@@ -53,15 +53,14 @@
       </div>
     </div>
 
-    <div class="container mt-4 mb-0 d-flex justify-content-center align-items-center">
-      <div style="overflow:hidden;resize:none;max-width:100%;width:500px;height:500px;">
-        <div id="gmap-canvas" style="height:100%; width:100%;max-width:100%;"><iframe
-            style="height:100%;width:100%;border:0;" frameborder="0"
-            src="https://www.google.com/maps/embed/v1/place?q=korea&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
-        </div><a class="googlecoder" href="https://www.bootstrapskins.com/themes" id="authorize-map-data"></a>
+    <div class="map-container" style="overflow: hidden; max-width: 100%; width: 500px; height: 500px;">
+      <div id="gmap-canvas" style="height: 100%; width: 100%;">
+        <iframe style="height: 100%; width: 100%; border: 0;" frameborder="0"
+          src="https://www.google.com/maps/embed/v1/place?q=korea&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
+        </iframe>
       </div>
-
     </div>
+
   </section>
 
   <section id="top10" class="section" style=" background-image: url('https://t3.ftcdn.net/jpg/03/56/63/08/360_F_356630808_v0ePgo8pOpzTYXoHSnmhQzvtezh9UeLG.jpg'); background-size: cover;
@@ -857,7 +856,7 @@
               changeColors('#808080', '#E4EEF4', '#FEDCEC', 'https://img.freepik.com/free-vector/pastel-ombre-background-pink-purple_53876-120750.jpg');
               break;
             default:
-              changeColors('#dee397e6', '#dee397e6', '#FFE5B4', 'https://img.freepik.com/free-vector/pastel-ombre-background-pink-purple_53876-120750.jpg');
+              changeColors('#dee397e6', '#dee397e6', '#FFE5B4', );
               break;
           }
         });

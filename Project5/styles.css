@@ -16,8 +16,10 @@
 body {
     background-color: #ea78a0;
     background-position: center;
-    margin: 0;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 .navbar {
@@ -25,6 +27,7 @@ body {
     font-family: 'Love', sans-serif;
     background-color: #eeb2dd;
     position: sticky;
+    width: 100vw;
 }
 
 .navbar-brand img {

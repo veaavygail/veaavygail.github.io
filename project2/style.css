@@ -9,17 +9,20 @@ body {
    background-repeat: no-repeat;
    height: 100%;
    margin: 0;
-   padding: 0;
    font-family: 'Roboto', sans-serif !important;
-   overflow-x: hidden; /* Hide horizontal overflow */
-   overflow-y: auto;   /* Allow vertical scrolling */
+   overflow-x: hidden;
+   margin: 0;
+   padding: 0;
    width: 100%;
 }
 
-.card-text1,
-.card-title1 {
+.card-text1 {
    font-family: 'Poppins', sans-serif;
    color: black;
+}
+
+.card-title1 {
+   font-family: 'Poppins', sans-serif;
 }
 
 .navbar,
@@ -32,11 +35,15 @@ body {
    font-size: 20px;
 }
 
+.navbar-brand {
+   font-family: 'Awesome South Korea', sans-serif;
+}
+
 .carousel {
    width: 100%;
    height: 100%;
    margin: 0 auto;
-   border: 2px solid #000;
+   border: 2px solid #000000;
 }
 
 .carousel-inner {
@@ -82,31 +89,36 @@ body {
    padding: 20px;
 }
 
+.card-text {
+   color: black;
+}
+
+
 footer {
    background-color: #dee397e6;
    color: black;
    text-align: center;
-   padding: 20px;
-   width: 100vw;
-   position: absolute;
+   margin: auto;
+   padding: 10px 0;
+   position: bottom;
    bottom: 0;
-}
-
-#home {
-   overflow: hidden; /* Hide overflow for this section */
+   width: 100vw;
+   margin: 0;
 }
 
 .map-container {
    display: flex;
    justify-content: center;
    align-items: center;
-   width: 100%; /* Ensure it spans the full width */
-   height: 50vh;  /* Set the height you want for the map */
-   overflow: hidden; /* Hide overflow */
+   margin: 0 auto;
+   max-width: 100%;
+   /* Prevents it from exceeding container width */
 }
 
-iframe {
+.map-content {
    width: 100%;
    height: 100%;
-   border: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }

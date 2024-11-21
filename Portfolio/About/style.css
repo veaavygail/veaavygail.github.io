@@ -1,40 +1,28 @@
 /*PUT YOUR CUSTOM STYLE HERE*/
 
 /*!This style is important, do not override!*/
-* {
-	margin: 0;
-	padding: 0;
+/* Ensure your custom font is applied */
+@font-face {
+    font-family: 'CandyShopPersonalUse';
+    src: url('../assets/fonts/CandyShopPersonalUse.ttf') format('truetype');
 }
 
-.navbar-nav{
-    font-size: 1.25rem; 
-    font-weight: bold; 
-    color: black;
+@font-face {
+    font-family: 'HeyComic';
+    src: url('../assets/fonts/HeyComic.ttf') format('truetype');
 }
 
-.sectioner-header {
-    transition: 1s;
-    font-size: 40px;
-    letter-spacing: normal;
+/* Apply the font with !important to override Bootstrap styles */
+body {
+    font-family: 'CandyShopPersonalUse', sans-serif !important;
 }
 
-.sectioner-header:hover {
-    letter-spacing: .5em;
+/* Apply font to navbar */
+.navbar {
+    font-family: 'CandyShopPersonalUse', sans-serif !important;
+    background-color: #f37ae1 !important; 
 }
 
-.icon-box {
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px 0;
-    transition: transform 0.3s;
-}
-
-.icon-box:hover {
-    transform: scale(1.05);
-}
-
-.footer{
-    background-color: rgb(251, 166, 237);
-    margin: 0px;
+.navbar-brand, .nav-link{
+	font-family: 'CandyShopPersonalUse', sans-serif !important;
 }

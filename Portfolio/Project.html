@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>veaavygail</title>
-    <!-- Bootstrap CSS -->
+    <link rel="icon" href="ICON.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../Portfolio/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -29,34 +30,27 @@
 </head>
 
 <body id="body" data-bs-theme="pink" style="overflow-x: hidden;">
+    <div class="container-fluid sticky-top">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg p-3 w-100">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" aria-current="page" href="../index.html">
+                    Home
+                </a>
 
-    <nav class="navbar navbar-expand-lg" style="background-color: var(--bs-tertiary-bg);">
-		<div class="container-fluid">
-			<button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation"></button>
-			<div class="collapse navbar-collapse">
-			  <ul class="navbar-nav ml-auto">
-				<li class="nav-item">
-				  <a class="nav-link" href="../index.html" data-scroll-nav="0">Home</a>
-				</li>
-				<li class="nav-item">
-				  <a class="nav-link" href="/Portfolio/About.html" data-scroll-nav="1">About</a>
-				</li>
-				<li class="nav-item">
-				  <a class="nav-link" href="../Portfolio/Project.html" data-scroll-nav="2">Projects</a>
-				</li>
-				<li class="nav-item">
-				  <a class="nav-link" href="" data-scroll-nav="0">Gallery</a>
-				</li>
-				<li class="nav-item">
-				  <a class="nav-link" href="" data-scroll-nav="0">Awards</a>
-				</li>
-				<li class="nav-item">
-				  <a class="nav-link" href="#" data-scroll-nav="6">Contact</a>
-				</li>
-			  </ul>
-			</div>
-		  </div>
-	  </nav>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="../Portfolio/About.html">About</a>
+                        <a class="nav-link" href="../Portfolio/Project.html" data-scroll-nav="2">Projects</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
 
     <div class="container mt-5 p-4">
         <div class="row">
@@ -72,73 +66,48 @@
 
     <div class="container">
         <div class="row text-center">
-            <div class="col-md-6 col-sm-12">
-                <div class="project-card">
-                    <div class="project-icon">
-                       <a href="../Project1/index.html">
-                            <img src="https://cdn-icons-png.flaticon.com/512/545/545234.png" alt="Project 1 Icon">
-                       </a>
-                    </div>
-                    <h5>Mobile Device</h5>
-                    <p>Cutting-edge technology and sleek design: Highlights innovation and aesthetics.</p>
+            <div class="row mb-3">
+                <div class="col-md-4 col-sm-12 mb-3">
+                    <a href="../Project1/index.html"> <img class="Icons p-0" src="../Portfolio/image/Pro1.png"
+                            alt="Logo1"> </a>
+                </div>
+
+                <div class="col-md-4 col-sm-12 mb-3">
+                    <a href="../Project2/index.html"> <img class="Icons p-0" src="../Portfolio/image/Pro2.png"
+                            alt="Logo1"> </a>
+                </div>
+
+                <div class="col-md-4 col-sm-12 mb-3">
+                    <a href="../Project3/index.html"> <img class="Icons p-0" src="../Portfolio/image/Pro3.png"
+                            alt="Logo1"> </a>
                 </div>
             </div>
 
-            <div class="col-md-6 col-sm-12">
-                <div class="project-card">
-                    <div class="project-icon">
-                        <a href="../project2/index.html">
-                            <img src="https://cdn-icons-png.flaticon.com/512/545/545234.png" alt="Project 2 Icon">
-                        </a>
-                    </div>
-                    <h5>Korea: A Journey Through Culture and Innovation</h5>
-                    <p>Iconic landmarks, traditional arts, and modern innovations": Highlights both cultural heritage
-                        and contemporary advancements.</p>
+            <div class="row">
+                <div class="col-md-4 col-sm-12 mb-3">
+                    <a href="../Project4/index.html"> <img class="Icons p-0" src="../Portfolio/image/Pro4.png"
+                            alt="Logo1"> </a>
                 </div>
-            </div>
-        </div>
 
-
-
-        <div class="row text-center">
-            <div class="col-md-6 col-sm-12">
-                <div class="project-card">
-                    <div class="project-icon">
-                        <a href="../Project3/index.html">
-                            <img src="https://cdn-icons-png.flaticon.com/512/545/545234.png" alt="Project 3 Icon">
-                        </a>
-                    </div>
-                    <h5>College Memories: Moments to Cherish</h5>
-                    <p>Friendships were forged, dreams took shape": Highlights meaningful relationships and personal growth.</p>
+                <div class="col-md-4 col-sm-12 mb-3">
+                    <a href="../Project5/index.html"> <img class="Icons p-0" src="../Portfolio/image/Pro5.png"
+                            alt="Logo1"> </a>
                 </div>
-            </div>
 
-            <div class="col-md-6 col-sm-12">
-                <div class="project-card">
-                    <div class="project-icon">
-                        <a href="../Project4/index.html">
-                            <img src="https://cdn-icons-png.flaticon.com/512/545/545234.png" alt="Project 4 Icon">
-                        </a>
-                    </div>
-                    <h5>Project 4: Barky</h5>
-                    <p>Perfect for dog enthusiasts and prospective pet owners looking to learn more about their furry friends.</p>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-sm-12">
-                <div class="project-card">
-                    <div class="project-icon">
-                        <a href="../Project5/index.html">
-                            <img src="https://cdn-icons-png.flaticon.com/512/545/545234.png" alt="Project 5 Icon">
-                        </a>
-                    </div>
-                    <h5>Project 5: Stardew Valley</h5>
-                    <p>Stardew Valley lets you build the farm of your dreams, explore mines, fish, and forge meaningful relationships with quirky villagers. </p>
+                <div class="col-md-4 col-sm-12 mb-3">
+                    <a href="../Project6/index.html"> <img class="Icons p-0" src="../Portfolio/image/Pro6.png"
+                            alt="Logo1"> </a>
                 </div>
             </div>
         </div>
-
     </div>
+
+    <footer class="footer p-0 m-0">
+        <ul class="footer justify-content-center border-bottom">
+            <p class="text-center text-body-secondary">2024 Vea Avygail. All rights reserved.</p>
+        </ul>
+
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

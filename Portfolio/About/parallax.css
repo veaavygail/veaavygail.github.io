@@ -3,9 +3,14 @@
 /*github.com/cjdeclaro*/
 
 /*Key Art default settings*/
+@font-face {
+    font-family: 'CandyShopPersonalUse';
+    src: url('../assets/fonts/CandyShopPersonalUse.ttf') format('truetype');
+}
 
-.text-center {
-    text-align: center;
+@font-face {
+    font-family: 'HeyComic';
+    src: url('../assets/fonts/HeyComic.ttf') format('truetype');
 }
 
 .keyart,
@@ -62,12 +67,11 @@
 	opacity: 0;
 }
 
-footer {
-	background-color: #E6CF49;
-	color: black;
-	text-align: center;
-	padding: 10px 0;
-	position: relative;
-	bottom: 0;
-	width: 100%;
-  }
+.navbar {
+    font-family: 'CandyShopPersonalUse', sans-serif !important;
+    background-color: #f37ae1 !important; 
+}
+
+.navbar-brand, .nav-link{
+	font-family: 'CandyShopPersonalUse', sans-serif !important;
+}

@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'Love';
+    src: url('../assets/fonts/Love.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'HeyComic';
+    src: url('../assets/fonts/HeyComic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Powerpuff';
+    src: url('../assets/fonts/Powerpuff.otf') format('truetype');
+}
+
+body {
+    background-color: #ea78a0;
+    background-position: center;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.navbar {
+    text-align: center;
+    font-family: 'Love', sans-serif;
+    background-color: #eeb2dd;
+    position: sticky;
+}
+
+.navbar-brand img {
+    width: 250px;
+}
+
+.nav-link {
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: pink !important;
+}
+
+iframe {
+    width: 100%;
+    height: auto;
+    max-width: 100%; 
+    display: block;
+    margin: 0 auto;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000; 
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.Logo1 {
+    width: 99vw;
+}
+
+.Logo2 {
+    width: 600px;
+}
+
+.text {
+    font-family: 'HeyComic', sans-serif;
+    max-width: 500px;
+    text-align: center;
+    line-height: 1.5;
+    color: rgb(39, 39, 39);
+}
+
+.card-text {
+    font-family: 'HeyComic', sans-serif;
+    max-width: 500px;
+    text-align: center;
+    line-height: 1.5;
+    color: rgb(39, 39, 39);
+}
+
+.text {
+    width: 1000px;
+    background-color: #ea78a0;
+}
+
+
+.card1 {
+    width: 100%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.card1.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    font-family: 'Powerpuff', sans-serif;
+    background-color: #eeb2dd;
+    padding: 10px;
+    margin: 0;
+
+}

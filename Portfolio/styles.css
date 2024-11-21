@@ -1,4 +1,20 @@
+@font-face {
+    font-family: 'BiggerLove';
+    src: url('../assets/fonts/BiggerLove.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'HeyComic';
+    src: url('../assets/fonts/HeyComic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'TNR';
+    src: url('../assets/fonts/TimesNewRomance.ttf') format('truetype');
+}
 
+[data-bs-theme="pink"] {
+    --bs-body-bg: rgb(251, 166, 237);
+    --bs-tertiary-bg: rgb(246, 140, 232);
+  }
 .svg-wave {
     position: relative;
     height: 200px;
@@ -18,11 +34,14 @@
     transform: scale(1.5);
 }
 
-.navbar-nav{
-    font-size: 1.25rem; 
-    font-weight: bold; 
-    color: black;
+.navbar{
+ background-color: #f37ae1; 
 }
+
+.navbar-brand, .nav-link{
+    color:#000000;
+}
+
 
 
 .banner-overlay {
@@ -66,10 +85,6 @@
 
 .icon {
     filter: drop-shadow(10px 10px 1px rgba(219, 114, 201, 0.8)) drop-shadow(10px 10px 1px rgba(252, 166, 240, 0.8));
-}
-
-.icon:hover {
-    transform: scale(1.05);
 }
 
 .button {
@@ -128,6 +143,9 @@
     background-color: darkgray;
 }
 
+.Icons{
+    width:300px;
+}
 .footer{
     background-color: rgb(251, 166, 237);
     margin: 0px;

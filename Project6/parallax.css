@@ -3,18 +3,13 @@
 /*github.com/cjdeclaro*/
 
 /*Key Art default settings*/
-.f5 {
+.container-fluid1{
     font-size: 25px; 
     margin-top: 70px;
 	color: rgb(37, 37, 37); 
 	padding: 50px;
 }
 
-.img{
-	width: 100vw;
-	padding: 1px;
-	margin-top: 10px;
-}
 .card{
 	padding: 10px;
 	color:#191818;

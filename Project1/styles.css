@@ -1,135 +1,81 @@
-/* General Styles */
+
 body {
-    font-family: 'Segoe UI', sans-serif;
-    margin: 5px;
-    padding: 0;
-    background-image: url('https://marketplace.canva.com/EAGAttbZBhc/1/0/900w/canva-yellow-white-aesthetic-dreamy-background-instagram-story-ZiyeBy1cTdA.jpg'); /* Background image */
-    background-size: cover; 
-    background-position: center; 
+    font-family: 'Poppins', 'Noto Serif Hebrew', sans-serif;
+    background-color: #e9cf67;
+    background: linear-gradient(0deg, rgba(233,207,103,1) 0%, rgba(255,247,198,1) 13%, rgba(243,228,139,1) 30%, rgba(255,229,74,1) 50%, rgba(243,228,139,1) 72%, rgba(255,247,198,1) 88%, rgba(233,207,103,1) 100%);
     color: #333;
+    margin: 0px;
+    overflow-x: hidden;
+
+.card {
+    width: 100%;
 }
 
-/* Header */
-header {
-    background-color: rgba(255, 247, 195, 0.782);
-    color: black;
-    text-align: center;
-    padding: 60px 20px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: 7px;
+.col-12, .card {
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
-header h1 {
-    font-size: 3.5; 
-    margin: 3pxl;
-    text-transform: uppercase; 
+.card-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
-header p {
-    font-size: 1.8em; 
-    margin: 10px 0 0;
-    font-weight: 300;
+.card1 {
+    width: 50%;
+    max-width: 25rem;
+    background-color: #fffebd;
 }
 
-/* Banner Image */
-.banner-image {
-    margin: auto;
-    max-width: 1200px; 
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-in-out;
 }
 
-.banner-image img {
-    width: 100%; 
-    height: auto; 
-    margin-top: 3pxl;
-    border-radius: 12px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.ad-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-    background-color: rgba(255, 247, 195, 0.782);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 12px; 
-    transition: transform 0.3s, box-shadow 0.3s;
+section {
+    padding: 10px 0;
 }
 
-.ad-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+.line {
+    background-color: #f4f000;
+    height: 4px;
+    width: 60px;
+    margin: 0 auto;
 }
 
-.image img {
-    width: 100%; 
-    max-width: 700px;
-    border-radius: 12px; 
-    margin-right: 30px;
-    transition: transform 0.3s;
-}
-
-.image img:hover {
-    transform: scale(1.05); 
-}
-
-.ad-details {
-    flex: 1;
-}
-
-.ad-details h2 {
-    font-size: 2.5em;
-    color: #000000;
-    margin-bottom: 15px;
-}
-
-.ad-details ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    font-size: 1.2em;
-}
-
-.ad-details li {
-    margin-bottom: 10px;
-}
-
-/* Promo Message */
-.promo-message {
-    margin: 40px 0;
-}
-
-.promo-message h3 {
-    font-size: 5;
-    color: #000000;
-    margin-bottom: 10px; 
-}
-
-.promo-message p {
-    font-size: 1.6em; 
-    color: #000000;
-    font-weight: bold;
-}
-
-
-.cta p {
-    font-size: 1.5em;
-    margin-top: 20px;
+.card-title {
+    font-size: 2rem;
     color: #000000;
 }
 
-/* Footer */
+@media (max-width: 576px) {
+    .card-img-overlay .card-title {
+        font-size: 1.2rem;
+        text-align: center; 
+    }
+}
+
+.yt {
+    width: 100vw;
+}
+
 footer {
     background-color: rgba(255, 247, 195, 0.782);
     color: #000000;
     text-align: center;
-    padding: 20px 0;
+    padding: 10px;
     position: relative;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
 }
 
 footer p {
-    margin: 0;
+    margin: 0px;
 }

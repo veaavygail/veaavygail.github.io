@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My College Gallery</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="ICON.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
@@ -134,24 +135,35 @@
 
         function collapse() {
             var myContainer = document.getElementById("cardContainer");
-            myContainer.innerHTML = "";
 
-            for (var i = 0; i < 3; i++) {
-                myContainer.innerHTML += `
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-12 m-3 d-flex justify-content-center">
-                        <div class="card custom-card mt-5" id="pics${i}" onmouseenter="addShadow('pics${i}')"
-                            onmouseleave="removeShadow('pics${i}')">
-                            <img src="Image/${pictures[i]}" class="card-img-top">
-                        </div>
-                    </div>`;
-            }
+            var firstThreeHTML = `
+                <div class="col-xl-3 col-lg-6 col-md-6 col-12 m-3 d-flex justify-content-center">
+                    <div class="card custom-card mt-5" id="pics0" onmouseenter="addShadow('pics0')"
+                        onmouseleave="removeShadow('pics0')">
+                        <img src="Image/${pictures[0]}" class="card-img-top">
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-12 m-3 d-flex justify-content-center">
+                    <div class="card custom-card mt-5" id="pics1" onmouseenter="addShadow('pics1')"
+                        onmouseleave="removeShadow('pics1')">
+                        <img src="Image/${pictures[1]}" class="card-img-top">
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-12 m-3 d-flex justify-content-center">
+                    <div class="card custom-card mt-5" id="pics2" onmouseenter="addShadow('pics2')"
+                        onmouseleave="removeShadow('pics2')">
+                        <img src="Image/${pictures[2]}" class="card-img-top">
+                    </div>
+                </div>`;
+
+            myContainer.innerHTML = firstThreeHTML;
 
             document.getElementById("quoteSection").classList.add("d-none");
 
             isButtonDisabled = false;
             var seeMoreBtn = document.getElementById("seeMoreBtn");
             seeMoreBtn.removeAttribute("disabled");
-            seeMoreBtn.style.backgroundColor = "";
+            seeMoreBtn.style.backgroundColor = "#007bff";
             seeMoreBtn.style.pointerEvents = "auto";
 
             document.getElementById("collapseBtn").classList.add("d-none");

@@ -139,36 +139,25 @@
 
             const pageIndex = Math.floor(scrollY / viewportHeight);
 
-            // Change the body's background color
             if (pageIndex >= 1) {
                 document.body.style.backgroundColor = "#A45A52";
             } else {
                 document.body.style.backgroundColor = "";
             }
-
-            // Select the first SVG wave and change its fill color
-            const firstWave = document.querySelector("svg use"); // Select the first <use> inside the first SVG
-            if (firstWave) {
-                if (pageIndex >= 1) {
-                    firstWave.setAttribute("fill", "#DEB49C"); // New color when scrolled
-                } else {
-                    firstWave.setAttribute("fill", "#A45A52"); // Default color
-                }
-            }
         });
 
 
 
-        document.querySelectorAll('.zoom-button').forEach(button => {
-            button.addEventListener('click', function (e) {
-                e.preventDefault();
-                const link = this.getAttribute('href');
-                this.classList.add('zoomed');
-                setTimeout(() => {
-                    window.location.href = link;
-                }, 500);
-            });
-        });
+        // document.querySelectorAll('.zoom-button').forEach(button => {
+        //     button.addEventListener('click', function (e) {
+        //         e.preventDefault();
+        //         const link = this.getAttribute('href');
+        //         this.classList.add('zoomed');
+        //         setTimeout(() => {
+        //             window.location.href = link;
+        //         }, 500);
+        //     });
+        // });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

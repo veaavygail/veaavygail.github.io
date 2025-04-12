@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'BiggerLove';
+    src: url('../assets/fonts/BiggerLove.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'HeyComic';
+    src: url('../assets/fonts/HeyComic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'TNR';
+    src: url('../assets/fonts/TimesNewRomance.ttf') format('truetype');
+}
+
+[data-bs-theme="pink"] {
+    --bs-body-bg: rgb(251, 166, 237);
+    --bs-tertiary-bg: rgb(246, 140, 232);
+  }
+.svg-wave {
+    position: relative;
+    height: 200px;
+    background-color: rgb(251, 166, 237);
+    overflow: hidden;
+}
+
+.svg-wave::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border-radius: 100% 50% 0 0;
+    transform: scale(1.5);
+}
+
+.navbar{
+ background-color: #f37ae1; 
+}
+
+.navbar-brand, .nav-link{
+    color:#000000;
+}
+
+
+
+.banner-overlay {
+    background-color: rgb(251, 166, 237);
+    padding: 50px 0;
+}
+
+.banner-text {
+    padding: 20px;
+}
+
+.sectioner-header {
+    transition: 1s;
+    font-size: 40px;
+    letter-spacing: normal;
+}
+
+.sectioner-header:hover {
+    letter-spacing: .5em;
+}
+
+.introText {
+    transition: 1s;
+    font-size: 40px;
+    letter-spacing: normal;
+}
+
+.introText:hover {
+    letter-spacing: .5em;
+}
+
+.about {
+    background-color: white;
+    padding: 30px 0;
+    position: relative;
+}
+
+.sectioner-header h3 {
+    color: black;
+}
+
+.icon {
+    filter: drop-shadow(10px 10px 1px rgba(219, 114, 201, 0.8)) drop-shadow(10px 10px 1px rgba(252, 166, 240, 0.8));
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-decoration: none;
+    color: #e74b7e;
+    font-size: 18px;
+    border-radius: 20px;
+    width: 200px;
+    height: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.25);
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 1);
+    background-image: linear-gradient(180deg, rgba(254, 214, 227, 1), rgba(255, 126, 168, 1));
+}
+
+.button:hover {
+    box-shadow: 0 0 rgba(0, 0, 0, 0);
+}
+
+.line {
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: black;
+    margin: 10px auto;
+}
+
+.icon-box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    transition: transform 0.3s;
+}
+
+.icon-box:hover {
+    transform: scale(1.05);
+}
+
+.about-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.about-btn:hover {
+    background-color: darkgray;
+}
+
+.Icons{
+    width:300px;
+}
+.footer{
+    background-color: rgb(251, 166, 237);
+    margin: 0px;
+    margin-top:auto;
+}

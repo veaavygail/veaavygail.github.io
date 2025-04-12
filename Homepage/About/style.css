@@ -1,0 +1,37 @@
+/*PUT YOUR CUSTOM STYLE HERE*/
+
+/*!This style is important, do not override!*/
+/* Ensure your custom font is applied */
+@font-face {
+    font-family: 'CandyShopPersonalUse';
+    src: url('../assets/fonts/CandyShopPersonalUse.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'HeyComic';
+    src: url('../assets/fonts/HeyComic.ttf') format('truetype');
+}
+
+/* Apply the font with !important to override Bootstrap styles */
+body {
+    font-family: 'CandyShopPersonalUse', sans-serif !important;
+}
+
+/* Apply font to navbar */
+.navbar {
+    font-family: 'CandyShopPersonalUse', sans-serif !important;
+    background-color: #f37ae1 !important; 
+}
+
+.navbar-brand, .nav-link{
+	font-family: 'CandyShopPersonalUse', sans-serif !important;
+}
+
+.icon-box img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .icon-box img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.4));
+  }

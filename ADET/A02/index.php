@@ -85,14 +85,14 @@ if (isset($_GET['page'])) {
   const suspenseGradient = "#b0b0b0";
 
   if (page === "romance") {
-    navbar.forEach(navbar => {
-      navbar.style.background = romanceGradient;
-    });
-  } else if (page === "suspense") {
-    navbar.forEach(navbar => {
-      navbar.style.background = suspenseGradient;
-    });
+  for (var i = 0; i < navbar.length; i++) {
+    navbar[i].style.background = romanceGradient;
   }
+} else if (page === "suspense") {
+  for (var i = 0; i < navbar.length; i++) {
+    navbar[i].style.background = suspenseGradient;
+  }
+}
 </script>
 
 

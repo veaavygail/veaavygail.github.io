@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'Heyam';
+    src: url('font/Heyam.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Grobold';
+    src: url('font/GROBOLD.ttf') format('truetype');
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 2px;
+}
+
+.card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.navbar {
+    background-color: #8fc5ed;
+}
+
+.nav-link {
+    font-family: 'Heyam', sans-serif !important;
+    font-size: 150px;
+}
+
+.section-title {
+    font-family: 'Heyam', sans-serif !important;
+    font-size: 60px;
+}
+
+.information {
+    font-family: 'Heyam', sans-serif !important;
+}
+
+.p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+}
+
+
+.image1 img {
+    width: 300px;
+    height: auto;
+}
+
+.card1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+@media (max-width: 375px) {
+    .card1 {
+      height: 200px;
+    }
+  
+    .card1 img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  
+    .section-title {
+      font-size: 36px;
+    }
+  
+    .information h3 {
+      font-size: 18px;
+    }
+  
+    .description2{
+        font-size: 18px;
+      }
+    .information .p {
+      font-size: 16px;
+    }
+  }
+  
+
+.description {
+    font-family: 'Grobold', sans-serif !important;
+}
+
+.description1 {
+    font-family: 'Heyam', sans-serif !important;
+}
+
+.description11 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.description2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.footer {
+    background-color: #8fc5ed;
+}

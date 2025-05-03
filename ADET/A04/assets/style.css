@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'Dunkin';
+  src: url('Dunkin.otf') format('truetype');
+}
+
+#body {
+  font-family: 'Dunkin', sans-serif !important;
+}
+
+.btn {
+  font-family: 'Dunkin', sans-serif;
+  color: white;
+  background-color: #653819;
+}
+
+.btn:hover {
+  font-family: 'Dunkin', sans-serif;
+  color: white;
+  background-color: #FF671F;
+}
+
+.card {
+  font-family: 'Dunkin', sans-serif;
+  color: #FF671F;
+}
+
+.custom-button {
+  width: 150px;
+
+}
+
+.custom-button.content {
+  width: 250px;
+}
+
+.custom-button:hover {
+  background-color: #653819;
+  color: aliceblue;
+  cursor: pointer;
+}
+
+.topcontainer {
+  height: 20dvh;
+
+}
+
+.categories {
+  width: fit-content;
+}
+
+.maincontainer {
+  height: 70dvh;
+}
+

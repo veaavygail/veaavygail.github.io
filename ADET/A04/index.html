@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dunkin' Donut</title>
+  <link rel="icon" href="./assets/images/Dunkin.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <link href="./assets/style.css" rel="stylesheet">
+</head>
+
+<body id="body">
+  <nav class="navbar navbar-expand-lg p-3 mb-2">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="./assets/images/Dunkin.png" style="width: 200px;">
+      </a>
+      <button type="button" class="btn btn-dark" id="btn" onclick="mode()" data-bs-toggle="button">Mode</button>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row pt-3">
+      <div class="col-lg-9 col-md-6 col-sm-12">
+        <div class="row">
+          <div class="col pb-3">
+            <div class="card overflow-scroll shadow p-3 text-center topcontainer">
+              <div class="d-flex flex-start flex-row categories text-center" id="categories">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-">
+            <div class="card overflow-scroll text-center p-3 maincontainer">
+              <div class="d-flex flex-start flex-row flex-wrap justify-content-center" id="maincontainer">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card p-3 overflow-scroll" style="height: 100%;">
+          <div class="row">
+            <div class="col text-center justify-content-center">
+              <img src="./assets/images/DunkinReceipt.png" style="width: 300px;">
+            </div>
+          </div>
+
+          <div id="receipt">
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <div class="mt-4 d-flex flex-row text-center justify-content-center">
+                <div class="text-center"><b>TOTAL:</b></div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="mt-4 d-flex flex-row justify-content-between">
+                <div class="text-center"><b id="totalValue">0</b></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-auto p-4 justify-content-center">
+            <div class="col-lg-6 col-md-12 col-sm-12 mt-auto">
+              <div class="col-lg-6 col-md-12 col-sm-12 mx-auto d-flex flex-row justify-content-center">
+                <div onclick="clearReceipt()" class="btn btn-primary" id="btnClear">Clear</div>
+              </div>
+
+              <div class="col-lg-6 col-md-12 col-sm-12 mx-auto d-flex flex-row justify-content-center">
+                <div onclick="printReceipt()" class="btn btn-primary" id="btnPrint">Print</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var products = [
+      {
+        "category": "Classic Donut",
+        "contents": [
+          {
+            "isAvailable": true,
+            "name": "Bavarian Filled",
+            "code": "BFD",
+            "price": 32,
+            "image": "./assets/images/Classic/BavarianFilled.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Boston Kreme",
+            "code": "BKD",
+            "price": 32,
+            "image": "./assets/images/Classic/BostonKreme.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Choco Candy Sprinkler",
+            "code": "CCSD",
+            "price": 32,
+            "image": "./assets/images/Classic/ChocoCandySprinkler.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Choco Marble",
+            "code": "CMD",
+            "price": 32,
+            "image": "./assets/images/Classic/ChocoMarble.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Nutty Choco",
+            "code": "NCD",
+            "price": 32,
+            "image": "./assets/images/Classic/NuttyChoco.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Nutty Ube",
+            "code": "NUD",
+            "price": 32,
+            "image": "./assets/images/Classic/NuttyUbe.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Strawberry Candy Sprinkler",
+            "code": "SCSD",
+            "price": 32,
+            "image": "./assets/images/Classic/StrawberryCandySprinkler.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Strawberry Filled",
+            "code": "SFD",
+            "price": 32,
+            "image": "./assets/images/Classic/StrawberryFilled.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Sugar Raised",
+            "code": "SRD",
+            "price": 32,
+            "image": "./assets/images/Classic/SugarRaised.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Vanilla Candy Sprinkler",
+            "code": "VCSD",
+            "price": 32,
+            "image": "./assets/images/Classic/VanillaCandySprinkler.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Vanilla Marble",
+            "code": "VMD",
+            "price": 32,
+            "image": "./assets/images/Classic/VanillaMarble.png"
+          },
+        ]
+      },
+      {
+        "category": "Premium",
+        "contents": [
+          {
+            "isAvailable": true,
+            "name": "BTN",
+            "code": "BTNPD",
+            "price": 44,
+            "image": "./assets/images/Premium/BTN.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Choco BTN",
+            "code": "CBTNPD",
+            "price": 44,
+            "image": "./assets/images/Premium/ChocoBTN.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Choco Glazed",
+            "code": "CGPD",
+            "price": 44,
+            "image": "./assets/images/Premium/ChocoGlazed.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Choco Kreme",
+            "code": "CKPD",
+            "price": 44,
+            "image": "./assets/images/Premium/ChocoKreme.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Cinnamon Sugar Dusted",
+            "code": "CSDPD",
+            "price": 44,
+            "image": "./assets/images/Premium/CinnamonSugarDusted.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Dark Choco",
+            "code": "DCPD",
+            "price": 50,
+            "image": "./assets/images/Premium/DarkChoco.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Quezo Duo",
+            "code": "QDPD",
+            "price": 44,
+            "image": "./assets/images/Premium/QuezoDuo.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Strawberry Kreme Filled",
+            "code": "SKFPD",
+            "price": 44,
+            "image": "./assets/images/Premium/StrawberryKremeFilled.png"
+          },
+        ]
+      },
+      {
+        "category": "Munchkins",
+        "contents": [
+          {
+            "isAvailable": true,
+            "name": "Bavarian Munchkins",
+            "code": "BM",
+            "price": 8,
+            "image": "./assets/images/Munchkins/Bavarian.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "BTN Munchkins",
+            "code": "BTNM",
+            "price": 8,
+            "image": "./assets/images/Munchkins/BTN.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Cheese Trickles Donut",
+            "code": "CTM",
+            "price": 8,
+            "image": "./assets/images/Munchkins/CheeseTrickles.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Choco Bavarian Munchkins",
+            "code": "CBM",
+            "price": 8,
+            "image": "./assets/images/Munchkins/ChocoBavarian.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Choco BTN Munchkins",
+            "code": "CBM",
+            "price": 8,
+            "image": "./assets/images/Munchkins/ChocoBTN.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Choco Coconut Munchkins",
+            "code": "CCM",
+            "price": 8,
+            "image": "./assets/images/Munchkins/ChocoCoconut.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Choco Filled Munchkins",
+            "code": "CFM",
+            "price": 8,
+            "image": "./assets/images/Munchkins/ChocoFilled.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Glazed Munchkins",
+            "code": "GM",
+            "price": 8,
+            "image": "./assets/images/Munchkins/Glazed.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Purple Yam Munchkins",
+            "code": "PYM",
+            "price": 8,
+            "image": "./assets/images/Munchkins/PurpleYam.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Strawberry Filled Munchkins",
+            "code": "SFM",
+            "price": 8,
+            "image": "./assets/images/Munchkins/StrawberryFilled.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Sugar Raised Munchkins",
+            "code": "SRM",
+            "price": 8,
+            "image": "./assets/images/Munchkins/SugarRaised.png"
+          },
+        ]
+      },
+      {
+        "category": "Hot Beverages",
+        "contents": [
+          {
+            "isAvailable": true,
+            "name": "Cafe Americano",
+            "code": "CAHB",
+            "price": 104,
+            "image": "./assets/images/HotBeverages/CafeAmericano.png"
+
+          },
+          {
+            "isAvailable": true,
+            "name": "Cappucino",
+            "code": "CHB",
+            "price": 104,
+            "image": "./assets/images/HotBeverages/Cappucino.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Espresso",
+            "code": "EHB",
+            "price": 104,
+            "image": "./assets/images/HotBeverages/Espresso.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Hot Choco",
+            "code": "HCHB",
+            "price": 77,
+            "image": "./assets/images/HotBeverages/HotChoco.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Hot Latte",
+            "code": "HLHB",
+            "price": 104,
+            "image": "./assets/images/HotBeverages/HotLatte.png"
+          },
+        ]
+      },
+      {
+        "category": "Cold Beverages",
+        "contents": [
+          {
+            "isAvailable": true,
+            "name": "Iced Brewed Tea",
+            "code": "IBTCB",
+            "price": 70,
+            "image": "./assets/images/ColdBeverages/IcedBrewedTea.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Iced Choco Java",
+            "code": "ICJCB",
+            "price": 115,
+            "image": "./assets/images/ColdBeverages/IcedChocoJava.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Iced Coffee",
+            "code": "ICCB",
+            "price": 104,
+            "image": "./assets/images/ColdBeverages/IcedCoffee.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Iced Cooler",
+            "code": "ICCB",
+            "price": 70,
+            "image": "./assets/images/ColdBeverages/IcedCooler.png"
+          },
+        ]
+      },
+      {
+        "category": "Others",
+        "contents": [
+          {
+            "isAvailable": true,
+            "name": "Choco Bang",
+            "code": "CBO",
+            "price": 40,
+            "image": "./assets/images/Others/ChocoBang.png"
+          },
+          {
+            "isAvailable": true,
+            "name": "Dunkin Yam",
+            "code": "DYO",
+            "price": 40,
+            "image": "./assets/images/Others/DunkinYam.png"
+          },
+        ]
+      },
+    ]
+
+    var total = 0;
+
+    function loadCategories() {
+      var categoriesContainer = document.getElementById("categories");
+
+      products.forEach((product, index) => {
+        categoriesContainer.innerHTML += `
+          <div onclick="loadProducts('`+ index + `')" class="card mx-1 custom-button p-3 text-center">
+            <small>`+ product.category + `</small>
+          </div>
+        `;
+      });
+    }
+
+    function loadProducts(categoryIndex) {
+      var maincontainer = document.getElementById("maincontainer");
+      maincontainer.innerHTML = "";
+
+      products[categoryIndex].contents.forEach(content => {
+        maincontainer.innerHTML += `
+            <div onclick="addToReceipt('`+ content.price + `','` + content.name + `','` + content.code + + `','` + `')" class="card mx-1 my-2 custom-button content p-1 text-center">
+              <img src="`+ content.image + `">
+              <small>`+ content.name + `</small>
+            </div>
+          `;
+      });
+    }
+
+    function addToReceipt(price, code, name) {
+      var receiptContainer = document.getElementById("receipt");
+      total = parseFloat(total) + parseFloat(price);
+      totalValueElement = document.getElementById("totalValue");
+      totalValueElement.innerHTML = total;
+
+      receiptContainer.innerHTML += `
+        <div class="m-3 d-flex flex-row text-center justify-content-between">
+          <div class="col-6 my-2"><small>`+ code + `</small></div>
+          <div class="col-3 my-2"><small>`+ name + `</small></div>
+          <div class="col-3 my-2"><small>`+ price + `</small></div>
+        </div>
+      `;
+    }
+
+    function clearReceipt() {
+      var receiptContainer = document.getElementById("receipt");
+      receiptContainer.innerHTML = "";
+      total = 0;
+      document.getElementById("totalValue").innerHTML = total;
+    }
+
+    loadCategories();
+
+    function mode() {
+      var bodyElement = document.getElementById("body");
+      var currentTheme = bodyElement.getAttribute("data-bs-theme");
+      var newTheme = currentTheme === "light" ? "dark" : "light";
+      var receiptContainer = document.getElementById("receipt");
+      bodyElement.setAttribute("data-bs-theme", newTheme);
+
+      var btnElement = document.getElementById("btnPrimary");
+      if (newTheme === "dark") {
+        btnElement.style.backgroundColor = "gray";
+        receiptContainer.style.color="white";
+      } else {
+        btnElement.style.backgroundColor = "white";
+      }
+      
+
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
+    </script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+</body>
+
+</html>

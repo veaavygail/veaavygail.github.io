@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dunkin' Donut</title>
+  <link rel="icon" href="./assets/images/Dunkin.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <link href="./assets/style.css" rel="stylesheet">
+</head>
+
+<body id="body">
+  <nav class="navbar navbar-expand-lg p-3 mb-2">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="./assets/images/Dunkin.png" style="width: 200px;">
+      </a>
+      <button type="button" class="btn btn-dark" id="btn" onclick="mode()" data-bs-toggle="button">Mode</button>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row pt-3">
+      <div class="col-lg-9 col-md-6 col-sm-12">
+        <div class="row">
+          <div class="col pb-3">
+            <div class="card overflow-scroll shadow p-3 text-center topcontainer">
+              <div class="d-flex flex-start flex-row categories text-center" id="categories">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-">
+            <div class="card overflow-scroll text-center p-3 maincontainer">
+              <div class="d-flex flex-start flex-row flex-wrap justify-content-center" id="maincontainer">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card p-3 overflow-scroll" style="height: 100%;">
+          <div class="row">
+            <div class="col text-center justify-content-center">
+              <img src="./assets/images/DunkinReceipt.png" style="width: 300px;">
+            </div>
+          </div>
+
+          <div id="receipt">
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <div class="mt-4 d-flex flex-row text-center justify-content-center">
+                <div class="text-center"><b>TOTAL:</b></div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="mt-4 d-flex flex-row justify-content-between">
+                <div class="text-center"><b id="totalValue">0</b></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-auto p-4 justify-content-center">
+            <div class="col-lg-6 col-md-12 col-sm-12 mt-auto">
+              <div class="col-lg-6 col-md-12 col-sm-12 mx-auto d-flex flex-row justify-content-center">
+                <div onclick="clearReceipt()" class="btn btn-primary" id="btnClear">Clear</div>
+              </div>
+
+              <div class="col-lg-6 col-md-12 col-sm-12 mx-auto d-flex flex-row justify-content-center">
+                <div onclick="printReceipt()" class="btn btn-primary" id="btnPrint">Print</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    var categories = [];
+    var products = [];
+
+    const getAllCategories = async () => {
+      fetch(
+          'http://localhost/AVI/A05_BE/categories.php'
+          )
+        .then(response => response.json())
+        .then(data => {
+          categories = data;
+          loadCategories();
+        });
+    }
+
+    const getAllProducts = async (categoryID) => {
+      const categoryData = {
+        categoryID: categoryID
+      };
+
+      fetch(
+          'http://localhost/AVI/A05_BE/products.php', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(categoryData)
+          })
+        .then(response => response.json())
+        .then(data => {
+          products = data;
+          loadProducts();
+        });
+    }
+
+    getAllCategories();
+
+
+  
+    var total = 0;
+
+    function loadCategories() {
+      var categoriesContainer = document.getElementById("categories");
+
+      categories.forEach((category) => {
+        categoriesContainer.innerHTML += `
+          <div onclick="getAllProducts('` + category.categoryID + `')" class="card mx-1 custom-button p-3 text-center">
+            <small>` + category.name + `</small>
+          </div>
+        `;
+      });
+    }
+
+
+    function loadProducts(categoryID) {
+      var maincontainer = document.getElementById("maincontainer");
+      maincontainer.innerHTML = "";
+
+      products.forEach(product => {
+        maincontainer.innerHTML += `
+          <div onclick="addToReceipt('` + product.price + `','` + product.name +  `','` + product.code + + `','` + `')" class="card mx-1 my-2 custom-button content p-3 text-center">
+           <img src="`+ product.image + `">
+              <small>`+ product.name + `</small>
+            </div>
+        `;
+      });
+    }
+
+    function addToReceipt(price, code, name) {
+      var receiptContainer = document.getElementById("receipt");
+      total = parseFloat(total) + parseFloat(price);
+      totalValueElement = document.getElementById("totalValue");
+      totalValueElement.innerHTML = total;
+
+      receiptContainer.innerHTML += `
+        <div class="m-3 d-flex flex-row text-center justify-content-between">
+          <div class="col-6 my-2"><small>`+ code + `</small></div>
+          <div class="col-3 my-2"><small>`+ name + `</small></div>
+          <div class="col-3 my-2"><small>`+ price + `</small></div>
+        </div>
+      `;
+    }
+
+    function clearReceipt() {
+      var receiptContainer = document.getElementById("receipt");
+      receiptContainer.innerHTML = "";
+      total = 0;
+      document.getElementById("totalValue").innerHTML = total;
+    }
+
+    loadCategories();
+
+    function mode() {
+      var bodyElement = document.getElementById("body");
+      var currentTheme = bodyElement.getAttribute("data-bs-theme");
+      var newTheme = currentTheme === "light" ? "dark" : "light";
+      var receiptContainer = document.getElementById("receipt");
+      bodyElement.setAttribute("data-bs-theme", newTheme);
+
+      var btnElement = document.getElementById("btnPrimary");
+      if (newTheme === "dark") {
+        btnElement.style.backgroundColor = "gray";
+        receiptContainer.style.color = "white";
+      } else {
+        btnElement.style.backgroundColor = "white";
+      }
+
+
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
+    </script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+</body>
+
+</html>
